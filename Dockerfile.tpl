@@ -1,6 +1,6 @@
 FROM davidcaste/alpine-java-unlimited-jce:%JVM_FLAVOUR%
 
-MAINTAINER David Castellanos <davidcaste@gmail.com>
+MAINTAINER Richardson Lima <contato@richardsonlima.con.br>
 
 ENV TOMCAT_MAJOR=%TOMCAT_MAJOR% \
     TOMCAT_VERSION=%TOMCAT_VERSION% \
@@ -22,4 +22,4 @@ COPY logging.properties ${TOMCAT_HOME}/conf/logging.properties
 COPY server.xml ${TOMCAT_HOME}/conf/server.xml
 
 VOLUME ["/logs"]
-EXPOSE 8080
+EXPOSE 8081
