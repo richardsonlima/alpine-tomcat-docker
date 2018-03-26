@@ -1,14 +1,14 @@
 ## Minified Docker image with Tomcat, Java with unlimited JCE patch applied
 
-[![Build Status](https://travis-ci.org/davidcaste/docker-alpine-tomcat.svg?branch=master)](https://travis-ci.org/davidcaste/docker-alpine-tomcat)
+[![Build Status](https://travis-ci.org/davidcaste/docker-alpine-tomcat.svg?branch=master)](https://travis-ci.org/richardsonlima/docker-alpine-tomcat)
 
-[![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:latest.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:latest)
+[![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:latest.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:latest)
 
 Basic [Docker](https://www.docker.com/) image to run [Tomcat](https://tomcat.apache.org/) and [Java](https://www.java.com/) with unlimited JCE patch applied.
 
 This image is based on [AlpineLinux](http://alpinelinux.org/) to keep the size down, yet smaller images do exist. Includes BASH, since many Java applications like to have convoluted BASH start-up scripts.
 
-Extends [`davidcaste/alpine-java-unlimited-jce`](https://hub.docker.com/r/davidcaste/alpine-java-unlimited-jce/).
+Extends [`richardsonlima/alpine-java-unlimited-jce`](https://hub.docker.com/r/richardsonlima/alpine-java-unlimited-jce/).
 
 
 ### Versions
@@ -22,14 +22,14 @@ Extends [`davidcaste/alpine-java-unlimited-jce`](https://hub.docker.com/r/davidc
 
 | Tomcat version | Java version      | tags                                 | Size                                                                                                                                              |
 |:---------------|:------------------|:-------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tomcat 8       | Oracle Java 8 JRE | `latest` / `tomcat8` / `jre8tomcat8` | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jre8tomcat8.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jre8tomcat8) |
-| Tomcat 8       | Oracle Java 8 JDK | `jdk8tomcat8`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jdk8tomcat8.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jdk8tomcat8) |
-| Tomcat 8       | Oracle Java 7 JRE | `jre7tomcat8`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jre7tomcat8.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jre7tomcat8) |
-| Tomcat 8       | Oracle Java 7 JDK | `jdk7tomcat8`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jdk7tomcat8.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jdk7tomcat8) |
-| Tomcat 7       | Oracle Java 8 JRE | `tomcat7` / `jre8tomcat7`            | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jre8tomcat7.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jre8tomcat7) |
-| Tomcat 7       | Oracle Java 8 JDK | `jdk8tomcat7`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jdk8tomcat7.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jdk8tomcat7) |
-| Tomcat 7       | Oracle Java 7 JRE | `jre7tomcat7`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jre7tomcat7.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jre7tomcat7) |
-| Tomcat 7       | Oracle Java 7 JDK | `jdk7tomcat7`                        | [![](https://badge.imagelayers.io/davidcaste/alpine-tomcat:jdk7tomcat7.svg)](https://imagelayers.io/?images=davidcaste/alpine-tomcat:jdk7tomcat7) |
+| Tomcat 8       | Oracle Java 8 JRE | `latest` / `tomcat8` / `jre8tomcat8` | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jre8tomcat8.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jre8tomcat8) |
+| Tomcat 8       | Oracle Java 8 JDK | `jdk8tomcat8`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jdk8tomcat8.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jdk8tomcat8) |
+| Tomcat 8       | Oracle Java 7 JRE | `jre7tomcat8`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jre7tomcat8.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jre7tomcat8) |
+| Tomcat 8       | Oracle Java 7 JDK | `jdk7tomcat8`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jdk7tomcat8.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jdk7tomcat8) |
+| Tomcat 7       | Oracle Java 8 JRE | `tomcat7` / `jre8tomcat7`            | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jre8tomcat7.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jre8tomcat7) |
+| Tomcat 7       | Oracle Java 8 JDK | `jdk8tomcat7`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jdk8tomcat7.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jdk8tomcat7) |
+| Tomcat 7       | Oracle Java 7 JRE | `jre7tomcat7`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jre7tomcat7.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jre7tomcat7) |
+| Tomcat 7       | Oracle Java 7 JDK | `jdk7tomcat7`                        | [![](https://badge.imagelayers.io/richardsonlima/alpine-tomcat:jdk7tomcat7.svg)](https://imagelayers.io/?images=richardsonlima/alpine-tomcat:jdk7tomcat7) |
 
 
 ### Usage
@@ -45,12 +45,12 @@ There are two ways to use this image:
 1. Use it as base image for other images. For example:
 
   ```
-  FROM davidcaste/alpine-tomcat:tomcat8
+  FROM richardsonlima/alpine-tomcat:tomcat8
   ```
 
 1. Use the image directly, and copy the `.war` files directly into the *appBase* directory. For example:
 
   ```
-  docker run -it --rm davidcaste/alpine-tomcat /opt/tomcat/bin/catalina.sh run
+  docker run -it --rm richardsonlima/alpine-tomcat /opt/tomcat/bin/catalina.sh run
   docker cp ./sample.war tomcat-ci:/opt/tomcat/webapps/sample.war
   ```
