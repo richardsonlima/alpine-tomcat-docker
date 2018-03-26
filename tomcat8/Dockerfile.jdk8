@@ -1,6 +1,6 @@
 FROM davidcaste/alpine-java-unlimited-jce:jdk8
 
-MAINTAINER David Castellanos <davidcaste@gmail.com>
+MAINTAINER Richardson Lima <contato@richardsonlima.com.br>
 
 ENV TOMCAT_MAJOR=8 \
     TOMCAT_VERSION=8.5.3 \
